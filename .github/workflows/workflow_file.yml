@@ -1,0 +1,14 @@
+name: Workflow Name
+on:
+  schedule:
+    - cron: '<cron-expression>'
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lock threads
+        uses: dessant/lock-threads@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
