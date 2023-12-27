@@ -14,5 +14,20 @@ jobs:
     steps:
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
-      - name: 'Dependency Review'
+      - name: 'Check Dependency Graph and Security Features'
+        id: check-settings
+        run: |
+          #!/bin/bash
+          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${{ github.repository }}/dependency-graph")
+          if [[ "$response" != *"enabled": true* ]]; then
+            echo "Error: Dependency graph is not enabled. Please enable it in the repository settings." >&2
+            exit 1
+          fi
+          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${{ github.repository }}/advanced-security")
+          if [[ "$response" != *"enabled": true* ]]; then
+            echo "Error: GitHub Advanced Security is not enabled. Please enable it in the repository settings." >&2
+            exit 1
+          fi
+- name: 'Dependency Review'
+        if: steps.check-settings.outcome == 'success'
         uses: actions/dependency-review-action@v3
