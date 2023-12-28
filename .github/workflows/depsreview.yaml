@@ -14,5 +14,6 @@ jobs:
     steps:
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
-      - name: 'Dependency Review'
+      - name: 'Run Dependency Review'
+        if: secrets.GITHUB_TOKEN != ''
         uses: actions/dependency-review-action@v3
