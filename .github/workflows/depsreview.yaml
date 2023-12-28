@@ -2,8 +2,15 @@
 # Licensed under the MIT License (the "License");
 # you may not use this file except in compliance with the License.
 
-name: OpenIM Dependency Review
-on: [pull_request]
+name: Dependency Review
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -12,6 +19,18 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
+      - name: Check if Dependency graph is enabled
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const { data } = await github.request('GET /repos/{owner}/{repo}', {
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            })
+            if (!data.network_count) {
+              console.error('::error::Dependency graph is not enabled on this repository. Please enable it in the repository settings.')
+              process.exit(1)
+            }
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
