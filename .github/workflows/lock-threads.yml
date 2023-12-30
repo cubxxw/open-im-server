@@ -11,6 +11,7 @@ jobs:
       - name: Lock Threads
         uses: dessant/lock-threads@v4
         with:
+          # The 'github-token' is necessary for the 'dessant/lock-threads@v4' action to authenticate with GitHub and perform its operations. It is provided from the repository's secrets.
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-lock-inactive-days: '30'
           pr-lock-inactive-days: '30'
