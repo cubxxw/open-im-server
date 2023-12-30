@@ -83,6 +83,17 @@ You may now edit files on the `myfeature` branch.
 
 ### Building open-im-server
 
+### Enabling Dependency Review
+
+To enable the Dependency Review GitHub Action, you need to enable the Dependency graph and GitHub Advanced Security for private repositories. Here are the steps to do this:
+
+1. Navigate to the repository settings by visiting https://github.com/cubxxw/open-im-server/settings.
+2. In the left sidebar, click on "Security & analysis".
+3. Under "Dependency graph", click on "Enable".
+4. Under "GitHub Advanced Security", click on "Enable".
+
+Please note that you need to have the necessary permissions to make these changes. If you do not have these permissions, please contact the repository owner or someone with the necessary permissions.
+
 This workflow is process-specific. For quick-start build instructions for [openimsdk/open-im-server](https://github.com/openimsdk/open-im-server/blob/main/docs/contrib/util-makefile.md)
 
 ## 4. Keep your branch in sync
