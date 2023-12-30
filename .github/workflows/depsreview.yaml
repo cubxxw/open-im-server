@@ -12,7 +12,18 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Check Dependency Features'
+        if: ${{ always() }}
+          github.repository_settings.dependency_graph.enabled &&
+          github.repository_settings.security_and_analysis.advanced_security.enabled
+        run: |
+          if [ -z "${{ github.repository_settings.dependency_graph.enabled }}" ] || [ -z "${{ github.repository_settings.security_and_analysis.advanced_security.enabled }}" ]; then
+            echo "::error::Dependency graph and GitHub Advanced Security are not enabled. Please enable them."
+            exit 1
+          fi
+          echo 'Dependency graph and GitHub Advanced Security are enabled.'
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
+        if: ${{ success() }}
         uses: actions/dependency-review-action@v3
