@@ -42,4 +42,5 @@ jobs:
         uses: securego/gosec@master
         with:
           args: ./...
+          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
         continue-on-error: true
