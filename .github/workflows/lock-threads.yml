@@ -1,0 +1,20 @@
+name: Lock Threads
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Detect and Translate Issue Body
+        uses: foo/bar@v1
+        with:
+          issue-body: ${{ github.event.issue.body }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          target-language: 'en'
+      - name: Lock Threads
+        uses: dessant/lock-threads@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
