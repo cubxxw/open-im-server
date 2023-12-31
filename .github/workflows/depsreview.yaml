@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   dependency-review:
+    if: github.token != ''
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Repository'
