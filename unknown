@@ -1,0 +1,20 @@
+name: Lock Threads
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if GITHUB_TOKEN is set
+        run: |
+          if [[ -z "${{ secrets.GITHUB_TOKEN }}" ]]; then
+            echo "GITHUB_TOKEN is not set. Using default value."
+            echo "GITHUB_TOKEN=default_value" >> $GITHUB_ENV
+          fi
+      - name: Lock Threads
+        uses: dessant/lock-threads@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
