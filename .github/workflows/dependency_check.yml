@@ -1,0 +1,24 @@
+name: Dependency Check
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check repository settings
+      run: |
+        set -e
+        echo "Checking repository settings..."
+        REPO_INFO=$(gh repo view --json isPrivate,features)
+        IS_PRIVATE=$(echo $REPO_INFO | jq -r '.isPrivate')
+        FEATURES=$(echo $REPO_INFO | jq -r '.features[]')
+        if [[ "$IS_PRIVATE" != "true" || ! " ${FEATURES[@]} " =~ "advanced_security" ]]; then
+          echo "Error: Dependency graph and GitHub Advanced Security are not enabled on this repository."
+          echo "Please enable them from the repository settings."
+          exit 1
+        fi
+        echo "Dependency graph and GitHub Advanced Security are enabled."
