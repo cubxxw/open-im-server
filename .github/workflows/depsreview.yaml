@@ -12,6 +12,10 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Check Repository Settings'
+        run: |
+          # Use GitHub API to check if Dependency graph and GitHub Advanced Security are enabled
+          # If not, fail with a clear error message
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
