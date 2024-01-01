@@ -1,3 +1,6 @@
+# Before running this workflow, ensure that the Dependency graph and GitHub Advanced Security are enabled on private repositories. 
+# See https://github.com/cubxxw/open-im-server/settings/security_analysis
+
 # Copyright © 2023 KubeCub open source community. All rights reserved.
 # Licensed under the MIT License (the "License");
 # you may not use this file except in compliance with the License.
