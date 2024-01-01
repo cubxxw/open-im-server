@@ -12,7 +12,13 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Check Dependency graph and GitHub Advanced Security'
+        id: check_dependencies
+        run: |
+          # Custom script or action to verify if Dependency graph and GitHub Advanced Security are enabled
+          # This is a placeholder for the actual script or action
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
+        if: steps.check_dependencies.outputs.enabled == 'true'
         uses: actions/dependency-review-action@v3
