@@ -146,7 +146,6 @@ function openim::rpc::start() {
 
     openim::util::check_ports ${OPENIM_RPC_PORT_TARGETS[@]}
     # openim::util::check_ports ${OPENIM_RPC_PROM_PORT_TARGETS[@]}
-
 }
 
 function openim::rpc::start_service() {
