@@ -62,8 +62,7 @@ function openim::test::auth() {
 	openim::test::get_token
 
 	# 2. Force logout the test user from a specific platform.
-    # TODO： BUG
-	# openim::test::force_logout
+	openim::test::force_logout
 
 	# Log the completion of the auth test suite.
 	openim::log::success "Auth test suite completed successfully."
@@ -605,7 +604,7 @@ function openim::test::friend() {
 	local friend_token="-Htoken: $(openim::test::get_token "${FRIEND_USER_ID}")"
 	# 3. Respond to a friend request.
 	# TODO：
-	#   openim::test::add_friend_response "${FRIEND_USER_ID}" "${TEST_USER_ID}"
+	# openim::test::add_friend_response "${FRIEND_USER_ID}" "${TEST_USER_ID}"
 
 	Token=$original_token
 	# 4. Retrieve the friend list of the test user.
@@ -613,7 +612,7 @@ function openim::test::friend() {
 
 	# 5. Set a remark for a friend.
 	# TODO：
-	#   openim::test::set_friend_remark "${TEST_USER_ID}" "${FRIEND_USER_ID}"
+	# openim::test::set_friend_remark "${TEST_USER_ID}" "${FRIEND_USER_ID}"
 
 	# 6. Retrieve the friend application list for the test user.
 	openim::test::get_friend_apply_list "${TEST_USER_ID}" 1 100
@@ -623,7 +622,7 @@ function openim::test::friend() {
 
 	# 8. Delete a friend.
 	# TODO：
-	#   openim::test::delete_friend "${TEST_USER_ID}" "${FRIEND_USER_ID}"
+	# openim::test::delete_friend "${TEST_USER_ID}" "${FRIEND_USER_ID}"
 
 	# 9. Add a user to the blacklist.
 	openim::test::add_black "${TEST_USER_ID}" "${BLACK_USER_ID}"
