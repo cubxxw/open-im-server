@@ -1,4 +1,6 @@
 redis:
-  address: [ 172.28.0.1:16379 ]
+  # address: [ 172.28.0.1:16379 ]
+  host: 172.28.0.1
+  port: 16379
   username: ''
   password: openIM123

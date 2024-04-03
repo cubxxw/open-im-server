@@ -1,7 +1,9 @@
 kafka:
   username: ''
   password: ''
-  addr: [ 172.28.0.1:19094 ]
+  # addr: [ 172.28.0.1:19094 ]
+  host: 172.28.0.1
+  port: 19094
   latestMsgToRedis:
     topic: "latestMsgToRedis"
   offlineMsgToMongo:
