@@ -1,0 +1,623 @@
+# Instincts generated from https://github.com/cubxxw/open-im-server
+# Generated: 2026-07-02T08:38:39.701Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: open-im-server-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: refactor
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: refactor(changelog): modernize generator and workflows (#3753)
+
+---
+id: open-im-server-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Commit Length
+
+## Action
+
+Write moderate-length commit messages (~62 characters)
+
+## Evidence
+
+- Average commit message length: 62 chars
+- Based on 1 commits
+
+---
+id: open-im-server-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: open-im-server-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: open-im-server-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: open-im-server-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/open-im-server
+---
+
+# Open Im Server Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: open-im-server-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct File Naming
+
+## Action
+
+Name the file using kebab-case
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: open-im-server-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: open-im-server-instinct-class-naming
+trigger: "When defining a new class or struct"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: open-im-server-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: open-im-server-instinct-import-style
+trigger: "When importing modules in Go files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: open-im-server-instinct-export-style
+trigger: "When exporting functions or variables"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: open-im-server-instinct-git-commit-prefix
+trigger: "When making a refactor commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Git Commit Prefix
+
+## Action
+
+Prefix the commit message with 'refactor' following conventional commit format
+
+## Evidence
+
+- Seen in commit 'refactor(changelog): modernize generator and workflows (#3753)'
+- Pattern in commits.prefixes
+
+---
+id: open-im-server-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Git Commit Length
+
+## Action
+
+Keep the commit message around 62 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: open-im-server-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Git Commit Format
+
+## Action
+
+Use the conventional commit format: <type>(<scope>): <description>
+
+## Evidence
+
+- Pattern in commits.type
+- Seen in commit 'refactor(changelog): modernize generator and workflows (#3753)'
+
+---
+id: open-im-server-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: open-im-server-instinct-workflow-auto-assign-issue
+trigger: "When a new issue is created"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Auto Assign Issue
+
+## Action
+
+Automatically assign the issue using .github/workflows/auto-assign-issue.yml
+
+## Evidence
+
+- .github/workflows/auto-assign-issue.yml
+
+---
+id: open-im-server-instinct-workflow-auto-invite-comment
+trigger: "When a comment is made that matches invitation criteria"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Auto Invite Comment
+
+## Action
+
+Trigger auto-invite workflow using .github/workflows/auto-invite-comment.yml
+
+## Evidence
+
+- .github/workflows/auto-invite-comment.yml
+
+---
+id: open-im-server-instinct-workflow-changelog
+trigger: "When a release or significant change is made"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Changelog
+
+## Action
+
+Update changelog using .github/workflows/changelog.yml
+
+## Evidence
+
+- .github/workflows/changelog.yml
+
+---
+id: open-im-server-instinct-workflow-cla-assistant
+trigger: "When a pull request is opened"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Cla Assistant
+
+## Action
+
+Check contributor license agreement using .github/workflows/cla-assistant.yml
+
+## Evidence
+
+- .github/workflows/cla-assistant.yml
+
+---
+id: open-im-server-instinct-workflow-cleanup-milestone
+trigger: "When milestone PRs are merged"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Cleanup Milestone
+
+## Action
+
+Run cleanup workflow using .github/workflows/cleanup-after-milestone-prs-merged.yml
+
+## Evidence
+
+- .github/workflows/cleanup-after-milestone-prs-merged.yml
+
+---
+id: open-im-server-instinct-workflow-codeql-analysis
+trigger: "When code is pushed or PR is opened"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Codeql Analysis
+
+## Action
+
+Run CodeQL analysis using .github/workflows/codeql-analysis.yml
+
+## Evidence
+
+- .github/workflows/codeql-analysis.yml
+
+---
+id: open-im-server-instinct-workflow-comment-check
+trigger: "When a comment is posted"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Comment Check
+
+## Action
+
+Check comment content using .github/workflows/comment-check.yml
+
+## Evidence
+
+- .github/workflows/comment-check.yml
+
+---
+id: open-im-server-instinct-workflow-docker-build-release
+trigger: "When building or releasing Docker images"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Docker Build Release
+
+## Action
+
+Use .github/workflows/docker-build-and-release-services-images.yml for automation
+
+## Evidence
+
+- .github/workflows/docker-build-and-release-services-images.yml
+
+---
+id: open-im-server-instinct-workflow-go-build-test
+trigger: "When Go code is pushed or PR is opened"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Go Build Test
+
+## Action
+
+Run build and test using .github/workflows/go-build-test.yml
+
+## Evidence
+
+- .github/workflows/go-build-test.yml
+
+---
+id: open-im-server-instinct-workflow-help-comment-issue
+trigger: "When a help comment is posted on an issue"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Help Comment Issue
+
+## Action
+
+Trigger help comment workflow using .github/workflows/help-comment-issue.yml
+
+## Evidence
+
+- .github/workflows/help-comment-issue.yml
+
+---
+id: open-im-server-instinct-workflow-merge-from-milestone
+trigger: "When merging from a milestone branch"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Merge From Milestone
+
+## Action
+
+Use .github/workflows/merge-from-milestone.yml to automate merging
+
+## Evidence
+
+- .github/workflows/merge-from-milestone.yml
+
+---
+id: open-im-server-instinct-workflow-publish-docker-image
+trigger: "When a new Docker image is ready for publishing"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Publish Docker Image
+
+## Action
+
+Publish using .github/workflows/publish-docker-image.yml
+
+## Evidence
+
+- .github/workflows/publish-docker-image.yml
+
+---
+id: open-im-server-instinct-workflow-remove-unused-labels
+trigger: "When labels become unused"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Remove Unused Labels
+
+## Action
+
+Remove them using .github/workflows/remove-unused-labels.yml
+
+## Evidence
+
+- .github/workflows/remove-unused-labels.yml
+
+---
+id: open-im-server-instinct-workflow-reopen-issue
+trigger: "When an issue needs to be reopened"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Reopen Issue
+
+## Action
+
+Use .github/workflows/reopen-issue.yml to automate reopening
+
+## Evidence
+
+- .github/workflows/reopen-issue.yml
+
+---
+id: open-im-server-instinct-workflow-update-version-on-release
+trigger: "When a release is published"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow Update Version On Release
+
+## Action
+
+Update version file using .github/workflows/update-version-file-on-release.yml
+
+## Evidence
+
+- .github/workflows/update-version-file-on-release.yml
+
+---
+id: open-im-server-instinct-workflow-user-first-interaction
+trigger: "When a user interacts for the first time"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/open-im-server
+---
+
+# Open Im Server Instinct Workflow User First Interaction
+
+## Action
+
+Trigger user-first-interaction workflow using .github/workflows/user-first-interaction.yml
+
+## Evidence
+
+- .github/workflows/user-first-interaction.yml
+
